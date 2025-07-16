@@ -15,6 +15,8 @@ The application is not yet functional. The goals of the project are as follows:
 5. Set up a watchdog timer to put the device to sleep after a period of inactivity.
 6. Have the device wake when a hardware interrupt is triggered.
 
+This is a long term project and not meant to make progress at a reasonable pace.
+
 ## Platform
 
 The application was developed with PlatformIO using Espressif's IoT Development framework.
