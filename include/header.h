@@ -4,17 +4,23 @@ Device: Lilygo T-Display-S3 (ESP32-S3R8 with an ST7789 LCD display)
     Declarations needed for the main applications
 */
 
-// ESP-IDF lcd api
-#include "hal/lcd_types.h"
+// For uint8_t
+#include <stdint.h>
 
-// SPI bus for lcd
+// ESP-IDF lcd and SPI api
+#include "hal/lcd_types.h"
 #include "esp_lcd_io_spi.h"
+#include "hal/spi_types.h"
+#include "esp_lcd_panel_commands.h"
+#include "esp_lcd_panel_interface.h"
 #include "esp_lcd_panel_vendor.h"
-//#include "esp_lcd_panel_dev.h"
-//#include "esp_lcd_panel_ops.h"
-//#include "esp_lcd_types.h"
-//#include "esp_lcd_panel_io.h"
-//#include "hal/spi_types.h"
+#include "esp_lcd_panel_dev.h"
+#include "esp_lcd_panel_ops.h"
+#include "esp_lcd_types.h"
+#include "esp_lcd_panel_io.h"
+
+// For backlight GPIO setup
+#include <driver/gpio.h>
 
 // GPIO pins
 #define LeftButton 0 // AKA BootButton
